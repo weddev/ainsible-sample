@@ -1,0 +1,9 @@
+---
+- hosts: test-servers
+  sudo: yes
+  tasks:
+  - name: package list update
+    apt: update_cache=yes
+  - name: install latest nginx package
+    apt: pkg=nginx state=latest
+
